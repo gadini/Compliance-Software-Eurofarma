@@ -1,0 +1,154 @@
+:root{
+    --euro: #384988;
+    --gray-back: rgb(241, 240, 240);
+    --euro-light: #c5d1fc;
+}
+
+.menu-inicial{
+    background-color: var(--euro);
+}
+
+.header{
+    width:100%;
+    top:0;
+    position: fixed;
+}
+
+.footer {
+    background-color: black;
+    color: white;	
+    position: fixed;	
+    width: 100%;
+    bottom: 0;  
+    padding: 10px 0;
+}
+
+.content{
+    height: 100vh;
+    padding-top: 4.5rem;
+    width: 100%;
+}
+
+.conteudo{
+    padding-top: 2rem;
+    height: 75vh;
+    position: relative;
+    overflow-y: auto;
+}
+
+.menu-lateral{
+    width: 15%;
+    height: 75vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.menu-lateral a{
+    padding: 0.5rem;
+}
+
+.menu-lateral a:hover{
+    background-color: var(--gray-back);
+    border-radius: 10%;
+}
+
+.menu-lateral li{
+    margin-bottom: 1rem;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-link-lateral{
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    width: 18rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+}
+
+.chatbot-header {
+    background-color: var(--euro);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-body {
+    height: 16rem;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.chatbot-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#chatbot-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top: none;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--euro);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.user-message, .bot-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: var(--euro-light);
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #f4ff95;
+    text-align: left;
+}
+
+.large-textarea{
+    height: 8rem;
+    resize: none;
+}
+
+.login{
+    background-color: var(--euro);
+}
+
+.login-box{
+    background-color: white;
+}
+
