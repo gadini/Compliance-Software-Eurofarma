@@ -26,7 +26,7 @@ public class UsuarioController {
 		return "usuario/form";
 	}
 	
-	@GetMapping()
+	@GetMapping("login")
 	public String login(Model model) {
 		model.addAttribute("usuario", new FormUsuario());
 		return "usuario/login";

@@ -1,6 +1,9 @@
 package com.github.gadini.complainceSoftware.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +27,13 @@ public class ComplianceController {
 	public String create(Model model) {
 		model.addAttribute("compliance", new FormCompliance());
 		return "compliance/form";
+	}
+	
+	@GetMapping("list")
+	public String list(Model model) {
+		List<Compliance> compliances = complianceRepository.findAll(Sort.by(Sort.Direction.ASC, "titulo"));
+		model.addAttribute("compliances", compliances);
+		return "compliance/list";
 	}
 	
 	@PostMapping("save")
