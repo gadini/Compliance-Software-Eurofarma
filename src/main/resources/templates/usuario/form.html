@@ -18,42 +18,7 @@
 
 <body>
 
-    <header class="header sticky-top">
-        <nav class="navbar navbar-expand-lg menu-inicial">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/logo.png" alt="Logo Eurofarma" width="50" height="48">
-                </a>
-                <a class="navbar-brand text-light" href="#">Easy Compliance</a>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0 mx-5 d-flex ms-md-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Sign in</a></li>
-                                <li><a class="dropdown-item" href="#">Sign out</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <form class="d-flex " role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </form>
-
-            </div>
-        </nav>
-    </header>
+    <div th:replace="layout/header :: headerFragment"></div>
 
     <div class="content">
 
@@ -123,9 +88,7 @@
         </div>
     </div>
 
-    <footer id="footer" class="footer text-center sticky-bottom">
-        &copy; 2024 - Equipe Easy Compliance
-    </footer>
+    <div th:replace="layout/footer :: footerFragment"></div>
 
 </body>
 
