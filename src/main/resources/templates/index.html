@@ -22,104 +22,25 @@
     <div class="content row">
         <div class="nav-lateral col-3">
             <ul class="nav flex-row menu-lateral mt-4 mx-5">
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link-lateral" href="#">Link</a>
-                </li>
+            	<li th:each="compliance : ${compliances}" class="nav-item">
+            		<a href="javascript:void(0);" 
+               		class="nav-link-lateral" 
+               		th:data-title="${compliance.titulo}"
+               		th:data-description="${compliance.corpo}"
+               		th:text="${compliance.titulo}" 
+               		onclick="updateContent(this)">
+            		</a>
+        		</li>
             </ul>
         </div>
 
         <div class="conteudo col-8">
             <div class="container">
-                <h1>TITULO</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-            
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt natus aliquid doloribus cumque ea molestiae quidem. Neque, dolores dolorum? Libero doloremque sint recusandae suscipit qui dolores alias dolore numquam ullam!</p>
-            
+                <h1 id="compliance-title">Bem vindo ao Projeto Easy Compliance</h1>
+        		<p id="compliance-description">Ao clicar em um dos links ao lado, 
+        		aqui no corpo da página aparecerão o titulo e o texto do compliance escolhido.
+        		No canto inferior esquerdo há um chatbot em que é possível pesquisar sobre algum 
+        		compliance especifico e retirar suas duvidas.</p>
             </div>
         </div>
 

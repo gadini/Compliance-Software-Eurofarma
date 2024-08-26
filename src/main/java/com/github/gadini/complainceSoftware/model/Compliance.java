@@ -19,7 +19,7 @@ public class Compliance extends AbstractEntity<Long>{
 	@Column(columnDefinition = "DATE")
 	private LocalDate dataEntrada;
 	
-	@Column(nullable = false, length = 500)
+	@Column(nullable = false, length = 2000)
 	private String corpo;
 	
 	@Column(columnDefinition = "DATE")
