@@ -7,7 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "compliance")
+@Table(name = "compliances")
 public class Compliance extends AbstractEntity<Long>{
 
 	@Column(nullable = false, length = 255)

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -60,7 +60,7 @@
         <div class="container my-5">
             <h3 class="mb-4">Cadastro de Compliance</h3>
 
-            <form th:action="@{/funcionarios/save}" th:object="${funcionario}" method="post">
+            <form th:action="@{/compliances/save}" th:object="${compliance}" method="post">
                 <div class="input-group mb-3">
 
                     <div class="input-group-prepend">
@@ -98,7 +98,7 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <button type="submit" class="btn btn-success btn-sm">Confirmar</button>
-                        <a th:href="@{/funcionarios}" class="btn btn-danger btn-sm">Cancelar</a>
+                        <a th:href="@{/compliances}" class="btn btn-danger btn-sm">Cancelar</a>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-sm ml-auto">Anexar PDF</button>
