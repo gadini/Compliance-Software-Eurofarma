@@ -26,6 +26,12 @@ public class UsuarioController {
 		return "usuario/form";
 	}
 	
+	@GetMapping()
+	public String login(Model model) {
+		model.addAttribute("usuario", new FormUsuario());
+		return "usuario/login";
+	}
+	
 	@PostMapping("save")
 	public String save(@ModelAttribute FormUsuario usuario) {		
 		Usuario entity = usuario.toModel();
