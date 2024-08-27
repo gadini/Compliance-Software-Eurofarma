@@ -41,7 +41,11 @@ public class ComplianceController {
 		Compliance entity = compliance.toModel();
 		
 		complianceRepository.save(entity);
-		return "redirect:/compliances";
+		
+		if(entity.getDataAlteracao() == null)
+			return "redirect:/compliances";
+		else
+			return "redirect:/compliances/list";
 	}
 
 	@GetMapping("update/{id}")
@@ -57,7 +61,7 @@ public class ComplianceController {
 	@GetMapping("delete/{id}")
 	public String delete(@PathVariable Long id) {
 		complianceRepository.deleteById(id);
-		return "redirect:/compliances";
+		return "redirect:/compliances/list";
 	}
 
 }
