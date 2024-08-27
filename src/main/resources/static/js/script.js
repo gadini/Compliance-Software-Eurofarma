@@ -57,5 +57,13 @@ function addInitialMessage() {
     chatBody.appendChild(initialMessage);
 }
 
+function updateContent(element) {
+    var title = element.getAttribute("data-title");
+    var description = element.getAttribute("data-description");
+
+    document.getElementById("compliance-title").textContent = title;
+    document.getElementById("compliance-description").textContent = description;
+}
+
 // Adiciona a mensagem inicial quando a página é carregada
 addInitialMessage();
