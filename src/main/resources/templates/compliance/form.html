@@ -65,8 +65,11 @@
                         <button type="submit" class="btn btn-success btn-sm">Confirmar</button>
                         <a th:href="@{/compliances}" class="btn btn-danger btn-sm">Cancelar</a>
                     </div>
+					
+					<label class="btn btn-primary btn-sm ml-auto">
+                        Anexar PDF <input type="file" id="pdfFile" style="display: none;" accept="application/pdf">
+                    </label>
 
-                    <button type="submit" class="btn btn-primary btn-sm ml-auto">Anexar PDF</button>
                 </div>
             </form>
 
@@ -74,6 +77,8 @@
     </div>
 
     <div th:replace="layout/footer :: footerFragment"></div>
+    
+    <script src="js/scriptcomp.js"></script>
 
 </body>
 

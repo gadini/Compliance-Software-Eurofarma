@@ -9,7 +9,7 @@ public class FormCompliance {
 	private Long id;
 	private String titulo;
 	private String tipo;
-	private LocalDate dataEntrada;
+	private LocalDate dataEntrada = LocalDate.now();
 	private String corpo;
 	private LocalDate dataAlteracao;
 	
