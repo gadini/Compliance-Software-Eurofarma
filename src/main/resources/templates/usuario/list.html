@@ -42,8 +42,8 @@
                    	<td th:text="${usuario.sobrenome}"></td>
                    	<td th:text="${usuario.nomeUsuario}"></td> 
                    	<td>
-                   		<a class="btn-sm btn-primary" th:href="@{/compliances/update/{id}(id=${compliance.id})}">Editar</a>
-	                   	<a class="btn-sm btn-danger" th:href="@{/compliances/delete/{id}(id=${compliance.id})}">Excluir</a>
+                   		<a class="btn-sm btn-primary" th:href="@{/usuarios/update/{id}(id=${usuario.id})}">Editar</a>
+	                   	<a class="btn-sm btn-danger" th:href="@{/usuarios/delete/{id}(id=${usuario.id})}">Excluir</a>
                    	</td>               
                </tr>                       
             </tbody>
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div th:replace="layout/footer :: footerFragment"></div>
+    <!-- <div th:replace="layout/footer :: footerFragment"></div> -->
 
 </body>
 

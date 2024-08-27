@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alteração de Compliance</title>
+    <title>Cadastro de Usuario</title>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -23,9 +23,9 @@
     <div class="content">
 
         <div class="container my-5">
-            <h3 class="mb-4">Alteração de Compliance</h3>
+            <h3 class="mb-4">Cadastro de Usuário</h3>
 
-            <form th:action="@{/compliances/save}" th:object="${compliance}" method="post">
+            <form th:action="@{/usuarios/save}" th:object="${usuario}" method="post">
                 <div class="input-group mb-3">
 
                     <div class="input-group-prepend">
@@ -36,44 +36,52 @@
 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <div class="input-group-text">Título</div>
+                        <div class="input-group-text">Nome</div>
                     </div>
-                    <input type="text" class="form-control" id="titulo" th:field="*{titulo}">
-                </div>
-
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">Tipo</div>
-                    </div>
-                    <input type="text" class="form-control" id="tipo" th:field="*{tipo}">
+                    <input type="text" class="form-control" id="nome" th:field="*{nome}">
                 </div>
                 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <div class="input-group-text">Data de Entrada</div>
+                        <div class="input-group-text">Sobrenome</div>
                     </div>
-                    <input type="text" class="form-control" id="dataEntrada" th:field="*{dataEntrada}">
+                    <input type="text" class="form-control" id="sobrenome" th:field="*{sobrenome}">
                 </div>
 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <div class="input-group-text">Data de Alteração</div>
+                        <div class="input-group-text">CPF</div>
                     </div>
-                    <input type="text" class="form-control" id="dataAlteracao" th:field="*{dataAlteracao}">
+                    <input type="text" class="form-control" id="cpf" th:field="*{cpf}">
                 </div>
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text">Corpo</span>
-                    <textarea class="form-control large-textarea" aria-label="Corpo" id="corpo" th:field="*{corpo}"></textarea>
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Email</div>
+                    </div>
+                    <input type="text" class="form-control" id="email" th:field="*{email}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Nome de Usuário</div>
+                    </div>
+                    <input type="text" class="form-control" id="nomeUsuario" th:field="*{nomeUsuario}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Senha</div>
+                    </div>
+                    <input type="text" class="form-control" id="senha" th:field="*{senha}">
                 </div>
 
                 <div class="d-flex justify-content-between">
                     <div>
                         <button type="submit" class="btn btn-success btn-sm">Confirmar</button>
-                        <a th:href="@{/compliances}" class="btn btn-danger btn-sm">Cancelar</a>
+                        <a th:href="@{/usuarios}" class="btn btn-danger btn-sm">Cancelar</a>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-sm ml-auto">Anexar PDF</button>
                 </div>
             </form>
 

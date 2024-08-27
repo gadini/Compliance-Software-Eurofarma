@@ -22,9 +22,11 @@
         <div class="login-box p-4 border rounded">
             <img src="/img/logo.png" alt="Logo Eurofarma" width="50" height="48">
             <h1 class="display-5 my-3">Login</h1>
-            <input type="text" class="form-control mb-3" placeholder="Nome de Usuario">
-            <input type="password" class="form-control mb-3" placeholder="Senha">
-            <button class="btn btn-primary w-100">Entrar</button>
+            <form th:action="@{/login/log}" method="post">
+            <input type="text" class="form-control mb-3" placeholder="Nome de Usuario" id="nomeUsuario">
+            <input type="password" class="form-control mb-3" placeholder="Senha" id="senha">
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
         </div>
     </div>
 
